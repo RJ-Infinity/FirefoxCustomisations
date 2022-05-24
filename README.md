@@ -7,7 +7,7 @@ contains all the custom css themes and extensions i use for firefox
 - Tree Style Tab https://addons.mozilla.org/en-GB/firefox/addon/tree-style-tab/
 
 ## Custom css
-- userChrome.css [./userChrome.css](./userChrome.css)
+- userChrome.css [./userChrome.css](./userChrome.css) see [./userChrome.md](./userChrome.md)
 
 ## Extension Data
 **COMMING SOON**
