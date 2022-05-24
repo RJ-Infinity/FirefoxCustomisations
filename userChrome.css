@@ -1,0 +1,63 @@
+
+/* hides all except the selected tab */
+.toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
+	display: none; /* this makes all tabs except the selected one hidden */
+}
+.toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
+	--width: calc(100% - 35px);
+	width: var(--width)!important; /* this sets the with of the selected tab to 100 */
+	max-width: var(--width)!important;
+	min-width: var(--width)!important;
+	position: absolute!important; /* this allows for the tab to have the default left of 0 */
+}
+#tabbrowser-arrowscrollbox{
+	position: relative; /* this allows the position absolute above to be relative to its parent*/
+}
+
+/* this improves the drop down position and removes the title */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-close,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header spacer,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-title,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-throbber{
+	display: none; /* this hides the title and close btn in the tree style tab sidebar */
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-icon{
+	width: 0px!important; /* this hides the icon (if dislpay none is used the popup dosent work?) */
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-switcher-arrow{
+	transform: rotate(180deg); /* this makes the icon point up not down */
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header{
+	bottom: 0;
+	position: absolute; /* this puts the open button at the bottom */
+	display: block;
+	padding: 2px!important; /* this adds padding so it isnt next to the edge of the screen */
+	border: none!important;/* hide the border at the bottom */
+}
+
+html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover){
+	width: 1px;
+	min-width: 1px; /* sets the width to 1px */
+	max-width: 1px;
+	margin-left: -1px; /* shifts it of screen so the content is full screen */
+	position: relative; /* this enables the translate */
+	transform: translateX(1px); /* shifts it back on screen but without moving the content */
+	z-index: 10; /* this puts it on top of the content */
+	opacity: 0; /* this hides it without disabeling the hover */
+}
+html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) *{
+	display: none; /* hides the content of the sidebar so you cant navigate with keyboard when hidden */
+}
+html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) + #sidebar-splitter{
+	display: none; /*hides the border between sidebar and content */
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"],
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter{
+	margin-top: -1px;/* this removes the border at the top of the sidebar */
+}
+
+/* stop the slide animation on fullscreen */
+#navigator-toolbox{
+	transition: margin-top 0s!important;
+}
