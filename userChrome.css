@@ -37,6 +37,7 @@
 	border: none!important;/* hide the border at the bottom */
 }
 
+/* this makes the sidebar act more like the title bar in f11 fullscreen mode */
 html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover){
 	width: 1px;
 	min-width: 1px; /* sets the width to 1px */
@@ -55,12 +56,13 @@ html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakur
 	display: none; /*hides the border between sidebar and content */
 }
 
+/* merge the sidebar and titlebar */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"],
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter{
 	margin-top: -1px;/* this removes the border at the top of the sidebar */
 }
 
-/* stop the slide animation on fullscreen */
+/* stop the slide animation on f11 fullscreen */
 #navigator-toolbox{
 	transition: margin-top 0s!important;
 }
