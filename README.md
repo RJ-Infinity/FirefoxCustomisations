@@ -10,10 +10,11 @@ contains all the custom css themes and extensions i use for firefox
 - userChrome.css [./userChrome.css](./userChrome.css) see [./userChrome.md](./userChrome.md)
 
 ## Theme
-generated with Firefox Colour
-to use can be ziped and renamed from `.zip` to `.xpi`.
+Generated with Firefox Colour.
 
-should also be available in the releases
+To use can be ziped and renamed from `.zip` to `.xpi`.
+
+Should also be available in the releases.
 
 ## Extension Data
 **COMMING SOON**
