@@ -9,6 +9,16 @@ contains all the custom css themes and extensions i use for firefox
 ## Custom css
 - userChrome.css [./userChrome.css](./userChrome.css) see [./userChrome.md](./userChrome.md)
 
+## Toolbar Customisations
+NOTE this will look different without the Custom css above
+
+![toolbar customisation image](./ToolbarCustomisation.png)
+
+to get there go to (there are other ways to get there)
+
+`≡` > `More tools` > `Cusomise toolbar...`
+
+
 ## Theme
 Generated with Firefox Colour.
 
