@@ -10,7 +10,7 @@ This should open the firefox profile in your file browser.
 
 If the folder dosen't contain a `chrome` folder create it.
 
-The pref `toolkit.legacyUserProfileCustomizations.stylesheets` should be set to true in [about:config](#)
+The pref `toolkit.legacyUserProfileCustomizations.stylesheets` should be set to `true` in [about:config](#)
 
 Put the userChrome.css in the folder and the css rules should get applied to Firefox after a restart.
 
