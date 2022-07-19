@@ -18,6 +18,11 @@ to get there go to (there are other ways to get there)
 
 `≡` > `More tools` > `Cusomise toolbar...`
 
+Aditionaly I have my bookmark bar set to always show
+
+in the Cusomise toolbar page at the bottom go to
+
+`Toolbars` > `Bookmarks Toolbar` > `Always Show`
 
 ## Theme
 Generated with Firefox Colour.
