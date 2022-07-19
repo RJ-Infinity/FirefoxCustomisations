@@ -1,0 +1,87 @@
+/* Show title of unread tabs with red and italic font */
+/*
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+*/
+
+/* Add private browsing indicator per tab */
+
+:root.sidebar tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+
+#tabbar{
+	background-color: rgb(255,255,255);
+}
+tab-item.active .background{
+  background-color: #EED3FE;
+  border: 1px solid #BE56FF;
+  box-shadow: inset 0 0 2px 1px rgba(190,86,255,0.5);
+}
+tab-item:not(.active) tab-closebox {
+  display: none;
+}
+tab-item tab-closebox::before{
+  height: calc(var(--svg-small-icon-size) + 0.4em);
+  margin-left: -0.125em;
+  margin-top: -0.2em;
+  width: calc(var(--svg-small-icon-size) + 0.4em);
+  border-radius: 20%;
+}
+tab-item {
+  --tab-margin-left: 2px;
+  --tab-margin-right: 2px;
+  --indent-level: attr(data-level integer)
+}
+tab-item:not(.expanding):not(.collapsing) .indent{
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='10'><rect width='1' height='10' fill='rgb(100,100,100)'/></svg>");
+  background-position: -1px 0px;
+  --opacity: 1;
+  opacity: var(--opacity);
+  /*background-size: var(--indent-size)
+  /*can shrink causing only one line for multiple indents*/
+}
+tab-item:not([data-child-ids]) tab-twisty, tab-item.pinned tab-twisty, tab-item.collapsed tab-twisty{
+  max-width:2px;
+  width:2px;
+  min-width:2px;
+}
+ul.menu-ui[role=menu] li{
+  margin:0.5em;
+}
+ul.menu-ui{
+  border-radius: 5px;
+}
+
+.menu-ui-marker{
+ opacity:0!important;/**/
+}
+  
+tab-item.pinned tab-favicon{
+  left: -1px;
+  top: -1px;
+}
+
+#tabbar-container{
+	background-color:white;
+}
+
+:root.left #tabbar {
+  direction: ltr;
+  overflow-x: hidden;
+}
+
+#tabbar.overflow { scrollbar-width: thin; } 
+#tabbar.overflow:hover { scrollbar-width: auto; }
+
+.after-tabs button:hover::before{
+  background-color:rgba(0, 0, 0, 0.17);
+  opacity:1;
+}
+
+#tabbar-container{
+  height:calc(100% - 27px);
+  box-shadow: 0px 27px white;
+}
