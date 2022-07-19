@@ -66,4 +66,9 @@ to change the ctrl+tab menu to do like most other apps (i.e. most recently used 
 
 `browser.ctrlTab.sortByRecentlyUsed` = `true`
 
+this is because the animation was slow and anoying
+
+(also i couldnt replicate it for the sidebar)
+
+`browser.fullscreen.animate` = `false`
 
