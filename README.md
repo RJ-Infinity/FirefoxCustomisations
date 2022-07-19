@@ -24,6 +24,17 @@ in the Cusomise toolbar page at the bottom go to
 
 `Toolbars` > `Bookmarks Toolbar` > `Always Show`
 
+another thing that I have changed is the Density again at the bottom of the Cusomise toolbar page.
+
+(Firefox version 89 and up)
+> However when aplying this setting a pref needs to be changed 
+> go to `about:config` and set the `browser.compactmode.show` to `true`
+
+then go to
+
+`Density` > `Compact`
+> this has a `not supported` warning in newer versions from my experience it works fine
+
 ## Theme
 Generated with Firefox Colour.
 
