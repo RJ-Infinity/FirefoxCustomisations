@@ -46,3 +46,18 @@ Alternativly if you have the Firefox Colour Extension installed you can find a s
 
 ## Extension Data
 **COMMING SOON**
+
+## Broser Pref's
+> ### How to acctualy use these options
+> go to `about:config` accept the warning
+> then in the search bar search for the pref you want to change
+> then change the value to the desired value
+
+to start the ones i allready mentioned
+
+`browser.compactmode.show` = `true`
+`toolkit.legacyUserProfileCustomizations.stylesheets` = `true`
+
+to change the ctrl+tab menu to do like most other apps (i.e. most recently used first)
+
+`browser.ctrlTab.sortByRecentlyUsed` = `true`
