@@ -72,3 +72,6 @@ this is because the animation was slow and anoying
 
 `browser.fullscreen.animate` = `false`
 
+this means that the browser dosent close when the last tab is
+
+`browser.tabs.closeWindowWithLastTab`	= `false`
