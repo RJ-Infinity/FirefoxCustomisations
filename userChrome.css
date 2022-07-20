@@ -66,3 +66,12 @@ html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakur
 #navigator-toolbox{
 	transition: margin-top 0s!important;
 }
+
+
+/* adds back the border on the top of the browser when not in full screen */
+html[sizemode="normal"]{
+	border-top: 1px solid rgb(112,112,112);
+}
+html[sizemode="normal"]:-moz-window-inactive{
+	border-top: 1px solid rgb(170,170,170);
+}
