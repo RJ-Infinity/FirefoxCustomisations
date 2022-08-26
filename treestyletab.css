@@ -73,8 +73,14 @@ tab-item.pinned tab-favicon{
   overflow-x: hidden;
 }
 
-#tabbar.overflow { scrollbar-width: thin; } 
-#tabbar.overflow:hover { scrollbar-width: auto; }
+#tabbar.overflow {
+  scrollbar-width: thin;
+  padding-right:9px;
+} 
+#tabbar.overflow:hover {
+  scrollbar-width: auto;
+  padding-right:0;
+}
 
 .after-tabs button:hover::before{
   background-color:rgba(0, 0, 0, 0.17);
