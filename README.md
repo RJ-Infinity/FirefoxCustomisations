@@ -75,3 +75,9 @@ this is because the animation was slow and anoying
 this means that the browser dosent close when the last tab is
 
 `browser.tabs.closeWindowWithLastTab`	= `false`
+
+this is required for the newest version of the userChrome.css to work as it impliments the long awaited has selector.
+this is a selector that is usefull in many cirumstances however the pref should eventualy be removed as the pref is
+enabaling the beta version of the has selector however it should be switched to enabled by default soon
+
+`layout.css.has-selector.enabled` = `true`
