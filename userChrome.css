@@ -1,9 +1,11 @@
 
 /* hides all except the selected tab */
-.toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
+html:not([customizing="true"]):has(#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden="true"])) .toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
 	display: none; /* this makes all tabs except the selected one hidden */
 }
-.toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
+/* the html:not(...):has(...) selector makes the tabs only hidden when the sidebar is open */
+/* the html:not([customizing="true"]) makes the tabs show when in the customise firefox page */
+html:not([customizing="true"]):has(#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden="true"])) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
 	--width: calc(100% - 35px);
 	width: var(--width)!important; /* this sets the with of the selected tab to 100 */
 	max-width: var(--width)!important;
