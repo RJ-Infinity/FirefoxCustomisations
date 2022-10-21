@@ -16,6 +16,15 @@ html:not([customizing="true"]):has(#sidebar-box[sidebarcommand="treestyletab_pir
 #tabbrowser-arrowscrollbox{
 	position: relative; /* this allows the position absolute above to be relative to its parent*/
 }
+/* this makes the titlebar the same height even on the Firefox view tab */
+/* note this might not work with different settings for the density */
+toolbar toolbarbutton#firefox-view-button{
+	padding: 3px 3px 4px 3px!important;
+}
+/* this makes the Firefox view tab visible */
+tab[hidden=true][selected=true][visuallyselected=true]{
+	display: block;
+}
 
 /* this improves the drop down position and removes the title */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-close,
