@@ -98,3 +98,6 @@ tab-item{
   --indent-line-color: rgb(100,100,100);
   --indent-line-color-active: rgb(100,100,100);
 }
+#subpanel-container{
+  display: none;
+}
