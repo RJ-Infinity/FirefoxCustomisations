@@ -13,7 +13,8 @@
 }
 
 #tabbar{
-	background-color: rgb(255,255,255);
+	/*background-color: rgb(255,255,255);*/
+  background-color: transparent;
 }
 tab-item.active .background{
   background-color: #EED3FE;
@@ -35,14 +36,15 @@ tab-item {
   --tab-margin-right: 2px;
   --indent-level: attr(data-level integer)
 }
-tab-item:not(.expanding):not(.collapsing) .indent{
+/*this code has been replaced by https://addons.mozilla.org/en-GB/firefox/addon/tst-indent-line*/
+/*tab-item:not(.expanding):not(.collapsing) .indent{
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='10'><rect width='1' height='10' fill='rgb(100,100,100)'/></svg>");
   background-position: -1px 0px;
   --opacity: 1;
   opacity: var(--opacity);
   /*background-size: var(--indent-size)
-  /*can shrink causing only one line for multiple indents*/
-}
+  can shrink causing only one line for multiple indents
+}*/
 tab-item:not([data-child-ids]) tab-twisty, tab-item.pinned tab-twisty, tab-item.collapsed tab-twisty{
   max-width:2px;
   width:2px;
@@ -90,4 +92,9 @@ tab-item.pinned tab-favicon{
 #tabbar-container{
   height:calc(100% - 27px);
   box-shadow: 0px 27px white;
+}
+
+tab-item{
+  --indent-line-color: rgb(100,100,100);
+  --indent-line-color-active: rgb(100,100,100);
 }
