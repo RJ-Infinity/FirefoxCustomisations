@@ -1,0 +1,59 @@
+{
+	"options.panel.matchCase": [
+		false
+	],
+	"options.panel.wholeWord": [
+		false
+	],
+	"options.panel.regExp": [
+		false
+	],
+	"options.result.hit.styles.fgColor": [
+		[
+			true,
+			"#ff4300"
+		]
+	],
+	"options.result.active.styles.fgColor": [
+		[
+			false,
+			"#0085ff"
+		]
+	],
+	"options.result.hit.styles.bold": [
+		false
+	],
+	"options.result.active.styles.bold": [
+		true
+	],
+	"options.result.miss.styles.shrink": [
+		[
+			false,
+			50
+		]
+	],
+	"options.result.miss.styles.opacity": [
+		[
+			true,
+			30
+		]
+	],
+	"options.result.miss.styles.hide": [
+		false
+	],
+	"options.search.scrollActiveTab": [
+		true
+	],
+	"options.search.clearAfterFocus": [
+		false
+	],
+	"options.search.fieldsPrefix": [
+		[
+			true,
+			"title url"
+		]
+	],
+	"options.advanced.hideHeader": [
+		""
+	]
+}
