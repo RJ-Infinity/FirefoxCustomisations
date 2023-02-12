@@ -48,7 +48,7 @@ To use can be ziped and renamed from `.zip` to `.xpi`. (note there is issues wit
 
 Should also be available in the releases.
 
-Alternativly if you have the Firefox Colour Extension installed you can find a share link [here](https://color.firefox.com/?theme=XQAAAAKRAQAAAAAAAABBKYhm849SCia9U4KEGccwS-xMDPsqvXkIbAF6EJDWcx9sS_Bi3JZGE6ZZI2STfI2PTljkk0BgVDr_x5nZIXQTNQvpV_y9uYuRVo-3iuAeC3IhKKigWxnnt8IC9aL4MJRjxEDRWMsuraA9rnFyohT3vrE9RZKNjKeaMRfWTVjoxTeTWfQ0CLgoJUAACix4S9wYQm_9woPubekmFhNQRXIkdtn6zaRG-kE6OFRz--s_cZ1kny5lkVMbzUduTip78D126zTPb4CDlzgA-jDJjpdsjph9iIOqZxe44e2iJwMwLSOZttTgA3quvCiN0sIPfv7245P8)
+Alternativly if you have the Firefox Colour Extension installed you can find a share link [here](https://color.firefox.com/?theme=XQAAAAKTAQAAAAAAAABBKYhm849SCia9U4KEGccwS-xMDPsqvXkIbAF6EJDWcx9sS_Bi3JZGE6ZZI2STfI2PTljkk0BgVDr_x5nZIXQTNQvpV_y9uYuRVo-3iuAeC3IhKKigWxnnt8IC9aL4MJRjxEDRWMsuraA9rnFyohT3vrE9RZKNjKeaMRfWTVjoxTeTWfQ0CLgoJUAACix4S9wYQm_9woPubekmFhNQRXIkdtn6zaxqBXnfMgcORiLlZjPMmvNprd6EFCk047BSYXWX4NWj0mb8lPJbnxyaOp7tx31AR56SsGDzGsZQ-Bp2RPFvxQMZxL-85iOHOrT-8ulxog)
 
 ## Extension Data
 **COMMING SOON**
