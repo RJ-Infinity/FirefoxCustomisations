@@ -1,0 +1,8 @@
+:root[f11lite] #navigator-toolbox:not(:hover):not(:focus-within) :is(
+	#nav-bar:not(:hover),
+	#PersonalToolbar:not(:hover)
+){
+	pointer-events: none;
+	position: absolute!important;
+	opacity: 0;
+}

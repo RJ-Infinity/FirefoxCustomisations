@@ -1,0 +1,4 @@
+/* stop the slide animation on f11 fullscreen */
+#navigator-toolbox{
+	transition: margin-top 0s!important;
+}

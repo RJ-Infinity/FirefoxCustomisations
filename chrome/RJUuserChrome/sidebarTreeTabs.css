@@ -1,17 +1,32 @@
 
 /* hides all except the selected tab */
-html:not([customizing="true"]):has(#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden="true"])) .toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
+:root:not([customizing="true"]):has(
+	#sidebar-box[
+		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
+	]:not([hidden="true"])
+) .toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
 	display: none; /* this makes all tabs except the selected one hidden */
 }
-/* the html:not(...):has(...) selector makes the tabs only hidden when the sidebar is open */
-/* the html:not([customizing="true"]) makes the tabs show when in the customise firefox page */
-html:not([customizing="true"]):has(#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not([hidden="true"])) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
-	--width: calc(100% - 35px);
+/* the :root:not(...):has(...) selector makes the tabs only hidden when the sidebar is open */
+/* the :root:not([customizing="true"]) makes the tabs show when in the customise firefox page */
+:root:not([customizing="true"]):has(
+	#sidebar-box[
+		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
+	]:not([hidden="true"])
+) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
+	--width: calc(100%);/* - 35px);*/
 	width: var(--width)!important; /* this sets the with of the selected tab to 100 */
 	max-width: var(--width)!important;
 	min-width: var(--width)!important;
 	
 	position: absolute!important; /* this allows for the tab to have the default left of 0 */
+}
+:root:not([customizing="true"]):has(
+	#sidebar-box[
+		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
+	]:not([hidden="true"])
+) .toolbar-items #new-tab-button{
+	display: -moz-box!important;
 }
 #tabbrowser-arrowscrollbox{
 	position: relative; /* this allows the position absolute above to be relative to its parent*/
@@ -49,21 +64,21 @@ tab[hidden=true][selected=true][visuallyselected=true]{
 }
 
 /* this makes the sidebar act more like the title bar in f11 fullscreen mode */
-html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover){
-	width: 1px;
-	min-width: 1px; /* sets the width to 1px */
-	max-width: 1px;
+:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover){
+	width: 5px!important;
+	min-width: 5px!important; /* sets the width to 5px */
+	max-width: 5px!important;
 	
-	margin-left: -1px; /* shifts it of screen so the content is full screen */
+	margin-left: -5px; /* shifts it of screen so the content is full screen */
 	position: relative; /* this enables the translate */
-	transform: translateX(1px); /* shifts it back on screen but without moving the content */
+	transform: translateX(5px); /* shifts it back on screen but without moving the content */
 	z-index: 10; /* this puts it on top of the content */
 	opacity: 0; /* this hides it without disabeling the hover */
 }
-html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) *{
+:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) *{
 	display: none; /* hides the content of the sidebar so you cant navigate with keyboard when hidden */
 }
-html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) + #sidebar-splitter{
+:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) + #sidebar-splitter{
 	display: none; /*hides the border between sidebar and content */
 }
 
@@ -71,18 +86,4 @@ html[sizemode="fullscreen"] #sidebar-box[sidebarcommand="treestyletab_piro_sakur
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"],
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter{
 	margin-top: -1px;/* this removes the border at the top of the sidebar */
-}
-
-/* stop the slide animation on f11 fullscreen */
-#navigator-toolbox{
-	transition: margin-top 0s!important;
-}
-
-
-/* adds back the border on the top of the browser when not in full screen */
-html[sizemode="normal"]{
-	border-top: 1px solid rgb(112,112,112);
-}
-html[sizemode="normal"]:-moz-window-inactive{
-	border-top: 1px solid rgb(170,170,170);
 }
