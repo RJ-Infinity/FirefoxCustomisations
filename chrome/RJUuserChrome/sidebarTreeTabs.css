@@ -14,12 +14,13 @@
 		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
 	]:not([hidden="true"])
 ) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
-	--width: calc(100%);/* - 35px);*/
+	--width: calc(100% - 35px);
+
 	width: var(--width)!important; /* this sets the with of the selected tab to 100 */
 	max-width: var(--width)!important;
 	min-width: var(--width)!important;
 	
-	position: absolute!important; /* this allows for the tab to have the default left of 0 */
+	/*position: absolute!important; /* this allows for the tab to have the default left of 0 */
 }
 :root:not([customizing="true"]):has(
 	#sidebar-box[
