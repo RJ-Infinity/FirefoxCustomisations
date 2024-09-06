@@ -13,14 +13,25 @@
 	#sidebar-box[
 		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
 	]:not([hidden="true"])
-) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab:not([pinned])[visuallyselected="true"]{
-	--width: calc(100% - 35px);
+) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab[visuallyselected]{
+	/* --width: calc(100% - 35px); */
 
-	width: var(--width)!important; /* this sets the with of the selected tab to 100 */
-	max-width: var(--width)!important;
-	min-width: var(--width)!important;
+	/* width: var(--width)!important; this sets the with of the selected tab to 100 */
+	/* max-width: var(--width)!important; */
+	/* min-width: var(--width)!important; */
+	max-width: none!important;
 	
 	/*position: absolute!important; /* this allows for the tab to have the default left of 0 */
+	&[pinned]{
+		flex-grow: 1;
+		/* you can also enable the close button on pinned tabs */
+		/* & .tab-close-button{
+			display: inline-flex !important;
+		} */
+		& .tab-icon-image{
+			margin-inline-end: 5.5px;
+		}
+	}
 }
 :root:not([customizing="true"]):has(
 	#sidebar-box[
@@ -36,7 +47,10 @@
 /* note this might not work with different settings for the density */
 toolbar toolbarbutton#firefox-view-button{
 	padding: 3px 3px 4px 3px!important;
+	/* make it have the firefox icon */
+	list-style-image: url("chrome://branding/content/icon32.png")!important;
 }
+
 /* this makes the Firefox view tab visible */
 tab[hidden=true][selected=true][visuallyselected=true]{
 	display: block;
