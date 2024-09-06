@@ -75,11 +75,11 @@ tab-item.pinned tab-favicon{
   overflow-x: hidden;
 }
 
-#tabbar.overflow {
+#tabbar.overflow > .vbox {
   scrollbar-width: thin;
   padding-right:9px;
 } 
-#tabbar.overflow:hover {
+#tabbar.overflow:hover > .vbox {
   scrollbar-width: auto;
   padding-right:0;
 }
@@ -100,4 +100,7 @@ tab-item{
 }
 #subpanel-container{
   display: none;
+}
+.overflow-indicator.end{
+  transform: translateY(8px);
 }
