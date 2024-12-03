@@ -1,8 +1,6 @@
 # FirefoxCustomisations
 contains all the custom css themes and extensions i use for firefox
 
-**NOTE: The tabs comming back when the tree tabs are hidden is slightly broken, this is due to firefox's implimentation of the has selector being in beta and not quite working correctly, not my code**
-
 ## Extensions
 **NOTE: This only contains the extensions that change the styling in any way**
 - Firefox Colour https://addons.mozilla.org/en-GB/firefox/addon/firefox-color/ (this is not needed as it was only used to generate the theme files)
