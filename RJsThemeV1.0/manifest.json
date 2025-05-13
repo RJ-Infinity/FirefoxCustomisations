@@ -29,6 +29,7 @@
       "frame_inactive": "rgb(179, 167, 193)",
       "icons": "rgb(46, 0, 91)",
       "ntp_text": "rgb(255, 255, 255)",
+      "ntp_background": "rgb(155, 136, 246)",
       "sidebar_border": "rgb(166, 147, 177)",
       "tab_loading": "rgb(190, 86, 255)"
     }
@@ -47,6 +48,7 @@
       "frame_inactive": "rgb(73, 61, 87)",
       "icons": "rgb(209, 163, 255)",
       "ntp_text": "rgb(21, 21, 21)",
+      "ntp_background": "rgb(155, 136, 246)",
       "sidebar_border": "rgb(96, 77, 106)",
       "tab_loading": "rgb(104, 0, 168)"
     }

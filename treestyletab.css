@@ -123,3 +123,19 @@ tab-item{
 .overflow-indicator.end{
   transform: translateY(8px);
 }
+
+
+
+:root tab-item:not(.pinned) tab-item-substance {
+  margin-left: calc(var(--tab-margin-left) + var(--tab-indent));
+}
+
+:root.right tab-item:not(.pinned) tab-item-substance {
+  margin-right: calc(var(--tab-margin-right);
+}
+
+:root.right tab-item .extra-items-container.indent {
+  left: unset;
+  right: auto;
+  rotate: 180deg;
+}

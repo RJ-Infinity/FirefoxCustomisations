@@ -2,7 +2,7 @@
 /* hides all except the selected tab */
 :root:not([customizing="true"]):has(
 	#sidebar-box[
-		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
+		sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"
 	]:not([hidden="true"])
 ) .toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
 	display: none; /* this makes all tabs except the selected one hidden */
@@ -11,7 +11,7 @@
 /* the :root:not([customizing="true"]) makes the tabs show when in the customise firefox page */
 :root:not([customizing="true"]):has(
 	#sidebar-box[
-		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
+		sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"
 	]:not([hidden="true"])
 ) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab[visuallyselected]{
 	/* --width: calc(100% - 35px); */
@@ -21,6 +21,9 @@
 	/* min-width: var(--width)!important; */
 	max-width: none!important;
 	
+	/* the first tab has extra margin that means it isnt positioned the same as the others */
+	margin: 0;
+
 	/*position: absolute!important; /* this allows for the tab to have the default left of 0 */
 	&[pinned]{
 		flex-grow: 1;
@@ -35,7 +38,7 @@
 }
 :root:not([customizing="true"]):has(
 	#sidebar-box[
-		sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"
+		sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"
 	]:not([hidden="true"])
 ) .toolbar-items #new-tab-button{
 	display: -moz-box!important;
@@ -57,29 +60,39 @@ tab[hidden=true][selected=true][visuallyselected=true]{
 }
 
 /* this improves the drop down position and removes the title */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-close,
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header spacer,
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-title,
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-throbber{
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header #sidebar-close,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header spacer,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header #sidebar-title,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header #sidebar-throbber{
 	display: none; /* this hides the title and close btn in the tree style tab sidebar */
 }
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-icon{
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header #sidebar-icon{
 	width: 0px!important; /* this hides the icon (if dislpay none is used the popup dosent work?) */
 }
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header #sidebar-switcher-arrow{
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header #sidebar-switcher-arrow{
 	transform: rotate(180deg); /* this makes the icon point up not down */
 }
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header{
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header{
 	bottom: 0;
 	position: absolute; /* this puts the open button at the bottom */
-	display: block;
 	
 	padding: 2px!important; /* this adds padding so it isnt next to the edge of the screen */
+	padding-left: 3px;/* because of the left border one more pixel of padding on the left than the bottom */
 	border: none!important;/* hide the border at the bottom */
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2px;
+	width: 100%;
+	pointer-events: none;
+	& #sidebar-switcher-target{
+		pointer-events: auto;
+		height: 30px;
+	}
 }
 
 /* this makes the sidebar act more like the title bar in f11 fullscreen mode */
-:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover){
+:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover){
 	width: 5px!important;
 	min-width: 5px!important; /* sets the width to 5px */
 	max-width: 5px!important;
@@ -90,15 +103,15 @@ tab[hidden=true][selected=true][visuallyselected=true]{
 	z-index: 10; /* this puts it on top of the content */
 	opacity: 0; /* this hides it without disabeling the hover */
 }
-:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) *{
+:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) *{
 	display: none; /* hides the content of the sidebar so you cant navigate with keyboard when hidden */
 }
-:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:not(:hover) + #sidebar-splitter{
+:root:is([sizemode="fullscreen"],[f11lite]) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) + #sidebar-splitter{
 	display: none; /*hides the border between sidebar and content */
 }
 
 /* merge the sidebar and titlebar */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"],
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter{
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"],
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] + #sidebar-splitter{
 	margin-top: -1px;/* this removes the border at the top of the sidebar */
 }
