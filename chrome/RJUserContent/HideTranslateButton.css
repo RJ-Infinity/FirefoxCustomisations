@@ -1,7 +1,7 @@
 /* hides the translate button when selecting text */
 /* from https://github.com/FilipePS/Traduzir-paginas-web */
 /* removes the floating translate button from the TWP - Translate Web Pages extension */
-#eButtonTransSelText, .notranslate { /* lets hope no websites use the class notranslate!! tis a bit silly to use just a class to identify... */
+#eButtonTransSelText {
 	display: none !important;
 }
 
