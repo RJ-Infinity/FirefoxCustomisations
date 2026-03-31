@@ -4,8 +4,11 @@
 	#sidebar-box[
 		sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"
 	]:not([hidden="true"])
-) .toolbar-items #tabbrowser-tabs tab:not([selected=true]).tabbrowser-tab:not([pinned]){
-	display: none; /* this makes all tabs except the selected one hidden */
+) .toolbar-items #tabbrowser-tabs arrowscrollbox > :is(
+	tab:not([selected=true]).tabbrowser-tab:not([pinned]),
+	tab-split-view-wrapper:not(:has(tab[selected=true]))
+){
+	display: none !important; /* this makes all tabs except the selected one hidden */
 }
 /* the :root:not(...):has(...) selector makes the tabs only hidden when the sidebar is open */
 /* the :root:not([customizing="true"]) makes the tabs show when in the customise firefox page */
@@ -13,14 +16,14 @@
 	#sidebar-box[
 		sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"
 	]:not([hidden="true"])
-) .toolbar-items #tabbrowser-tabs tab[selected=true].tabbrowser-tab[visuallyselected]{
+) .toolbar-items #tabbrowser-tabs :is(tab, tab-split-view-wrapper){
 	/* --width: calc(100% - 35px); */
 
 	/* width: var(--width)!important; this sets the with of the selected tab to 100 */
 	/* max-width: var(--width)!important; */
 	/* min-width: var(--width)!important; */
 	max-width: none!important;
-	
+
 	/* the first tab has extra margin that means it isnt positioned the same as the others */
 	margin: 0;
 
@@ -75,7 +78,7 @@ tab[hidden=true][selected=true][visuallyselected=true]{
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header{
 	bottom: 0;
 	position: absolute; /* this puts the open button at the bottom */
-	
+
 	padding: 2px!important; /* this adds padding so it isnt next to the edge of the screen */
 	padding-left: 3px;/* because of the left border one more pixel of padding on the left than the bottom */
 	border: none!important;/* hide the border at the bottom */
@@ -96,7 +99,7 @@ tab[hidden=true][selected=true][visuallyselected=true]{
 	width: 5px!important;
 	min-width: 5px!important; /* sets the width to 5px */
 	max-width: 5px!important;
-	
+
 	margin-left: -5px; /* shifts it of screen so the content is full screen */
 	position: relative; /* this enables the translate */
 	transform: translateX(5px); /* shifts it back on screen but without moving the content */
