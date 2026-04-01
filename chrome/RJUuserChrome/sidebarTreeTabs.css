@@ -118,3 +118,20 @@ tab[hidden=true][selected=true][visuallyselected=true]{
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] + #sidebar-splitter{
 	margin-top: -1px;/* this removes the border at the top of the sidebar */
 }
+
+/* remove the spacing around the split view*/
+#tabbrowser-tabpanels[splitview] .browserContainer{
+	border-radius: 0!important;
+}
+#tabbrowser-tabpanels[splitview] .split-view-panel.split-view-panel-active{
+	margin: 0!important;
+}
+
+splitter{
+	border-color: threedshadow !important;
+	z-index: 1;
+	width: 4px;
+	min-width: 0 !important;
+	border-width: 0 1px !important;
+	background-color: white !important;
+}
